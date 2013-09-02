@@ -8,6 +8,8 @@ describe "Authentication" do
   	
   	it { should have_content('Sign in') }
   	it { should have_title('Sign in') }
+  	it { should_not have_link('Profile',	href: user_path) }
+  	it { should_not have_link('Settings', 	href: edit_user_path) }
   end
   
   describe "signin" do
